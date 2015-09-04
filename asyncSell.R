@@ -5,7 +5,7 @@ library("RCurl")
 source("~/ShinyApps/tosAsync/source/functions.R")
 source("~/ShinyApps/tosAsync/private/details.R")
 
-logFile <<- "~/ShinyApps/tos/out/logFile.txt"
+logFile <<- "~/ShinyApps/tosAsync/out/logFile.txt"
 dDebug <<- F
 ticker <- "AAPL"
 allOrders <<- data.frame()
