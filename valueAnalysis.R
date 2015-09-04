@@ -1,7 +1,7 @@
 library("zoo")
 #library(performanceCharts)
 library("xts")
-valueFile <- "/Volumes/superFly/Users/davidshanabrook/ShinyApps/tos/out/value.csv"
+valueFile <- "/Volumes/superFly/Users/davidshanabrook/ShinyApps/tosAsync/out/value.csv"
 data <- read.csv(valueFile)
 data.zoo <- read.zoo(valueFile,format="%Y-%m-%d %H:%M:%S", header=T, sep=",")
 data.xts <- as.xts(data.zoo)
