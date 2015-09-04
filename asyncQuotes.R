@@ -4,11 +4,11 @@
 
 library("XML2R")
 library("RCurl")
-source("~/ShinyApps/tos/source/functions.R")
-source("~/ShinyApps/tos/private/details.R")
-
+source("~/ShinyApps/tosAsync/source/functions.R")
+source("~/ShinyApps/tosAsync/private/details.R")
+ticker <- "AAPL"
 dDebug <<- F
-quoteFile <- "~/ShinyApps/tos/out/quotes.csv"
+quoteFile <- "~/ShinyApps/tosAsync/out/quotes.csv"
 
 sessionid <- TDALogin("TSLU", "1.0", myLoginName, myPassWord)
 
