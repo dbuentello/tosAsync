@@ -4,9 +4,9 @@
 library(quantmod)
 library("XML2R")
 library("RCurl")
-source("~/ShinyApps/tos/source/functions.R")
-source("~/ShinyApps/tos/private/details.R")
-valueFile <- "~/ShinyApps/tos/out/value.csv"
+source("~/ShinyApps/tosAsync/source/functions.R")
+source("~/ShinyApps/tosAsync/private/details.R")
+valueFile <- "~/ShinyApps/tosAsync/out/value.csv"
 dDebug <<- F
 
 acctV <- function(accountid) {

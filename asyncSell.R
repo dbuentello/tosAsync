@@ -2,8 +2,8 @@
 #TDALogin, getOrder, TDATrade, TDAQuote, getAccount, facToNum, getPosition
 library("XML2R")
 library("RCurl")
-source("~/ShinyApps/tos/source/functions.R")
-source("~/ShinyApps/tos/private/details.R")
+source("~/ShinyApps/tosAsync/source/functions.R")
+source("~/ShinyApps/tosAsync/private/details.R")
 
 logFile <<- "~/ShinyApps/tos/out/logFile.txt"
 dDebug <<- F

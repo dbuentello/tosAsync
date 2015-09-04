@@ -2,9 +2,9 @@
 #TDALogin, getOrder, TDATrade, TDAQuote, getAccount, facToNum
 library("XML2R")
 library("RCurl")
-source("~/ShinyApps/tos/source/functions.R")
-source("~/ShinyApps/tos/private/details.R")
-logFile <<- "~/ShinyApps/tos/out/logFile.txt"
+source("~/ShinyApps/tosAsync/source/functions.R")
+source("~/ShinyApps/tosAsync/private/details.R")
+logFile <<- "~/ShinyApps/tosAsync/out/logFile.txt"
 dDebug <<- F
 
 slipPercent <- 0.005
