@@ -1,5 +1,5 @@
 library("zoo")
-#library(performanceCharts)
+library("PerformanceAnalytics")
 library("xts")
 valueFile <- "~/ShinyApps/tosAsync/out/value.csv"
 data <- read.csv(valueFile)
@@ -10,3 +10,4 @@ plot(data.zoo)
 plot.zoo(data.xts)
 #plot.zoo(data$all)
 #chart.TimeSeries(data$roll )
+chart.CumReturns(data.zoo$roll, wealth.index=T)

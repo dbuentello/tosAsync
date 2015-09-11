@@ -10,7 +10,7 @@ data.zoo <- read.zoo(quotesFile,format="%Y-%m-%d %H:%M:%S",FUN = as.POSIXct,
 
 data.xts <- as.xts(data.zoo)
 
-***************************
+#***************************
 #deal with opening.  painful method.  
 opening <- data.xts['T07:50/T09:35']
 opening$diff <- c(0,diff(as.numeric(opening$bid),1))
