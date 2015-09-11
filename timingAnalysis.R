@@ -1,7 +1,7 @@
 library("zoo")
 library("quantmod")
 #library(performanceCharts)
-quotesFile <- "/Volumes/superFly/Users/davidshanabrook/ShinyApps/tosAsync/out/quotes.csv"
+quotesFile <- "~/ShinyApps/tosAsync/out/quotes.csv"
 theClasses <- c("zoo", "character", rep("numeric",5))
 data <- read.table(quotesFile, sep=",", header=T)
 data.zoo <- read.zoo(quotesFile,format="%Y-%m-%d %H:%M:%S",FUN = as.POSIXct,
