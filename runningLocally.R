@@ -5,6 +5,6 @@ setwd("~/shinyapps/")
 options(shiny.reactlog=TRUE)
 runApp("openinterest")
 runApp("wealthAnalysis")
-deployApp("wealthAnalysis")
+deployApp("babynames")
 
 deployApp("openinterest")
