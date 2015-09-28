@@ -4,6 +4,7 @@ library("PerformanceAnalytics")
 library("xts")
 library(scales)
 valueFile <- "~/ShinyApps/tosAsync/out/value.csv"
+<<<<<<< Updated upstream
 #timeFormat <- "%Y-%m-%d %H:%M:%S"
 #data <- read.csv(valueFile)
 data.zoo <- read.zoo(valueFile, header=T, sep=",")
@@ -17,6 +18,18 @@ theData <- toWealth(data.zoo)
 
 #http://www.inside-r.org/packages/cran/zoo/docs/autoplot.zoo
 zoo.df = fortify(theData, melt = TRUE)
+=======
+timeFormat <- "%Y-%m-%d %H:%M:%S"
+data <- read.csv(valueFile)
+data.zoo <- read.zoo(valueFile, header=T, sep=",")
+data.xts <- as.xts(data.zoo)
+data.zoo <- subset(data.zoo, select=-c(mom,dad))
+data.zoo$all <- rowSums(data.zoo)
+#data.zoo$mine <- data.zoo$roll + data.zoo$ira + data.zoo$reg
+
+#http://www.inside-r.org/packages/cran/zoo/docs/autoplot.zoo
+zoo.df = fortify(data.zoo, melt = TRUE)
+>>>>>>> Stashed changes
 
 p <- ggplot(aes(x = Index, y = Value, group=Series,colour=Series), data = zoo.df) + geom_line() + xlab("Index") +  scale_y_continuous("Value $", labels=comma) 
 #+ scale_x_date()
