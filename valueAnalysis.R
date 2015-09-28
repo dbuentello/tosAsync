@@ -19,7 +19,7 @@ theData <- data.zoo
 theData <- toWealth(data.zoo)
 
 #http://www.inside-r.org/packages/cran/zoo/docs/autoplot.zoo
-zoo.df = fortify(data.zoo, melt = TRUE)
+zoo.df = fortify(theData, melt = TRUE)
 
 p <- ggplot(aes(x = Index, y = Value, group=Series,colour=Series), data = zoo.df) + geom_line() + xlab("Index") +  scale_y_continuous("Value $", labels=comma) 
 #+ scale_x_date()
