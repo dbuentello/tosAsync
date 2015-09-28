@@ -9,8 +9,9 @@ valueFile <- "~/ShinyApps/tosAsync/out/value.csv"
 data.zoo <- read.zoo(valueFile, header=T, sep=",")
 #data.xts <- as.xts(data.zoo)
 #data.zoo <- subset(data.zoo, select=-c(mom,dad))
-#data.zoo$all <- rowSums(data.zoo)
 
+#wealth or not
+theData <- data.zoo
 theData <- toWealth(data.zoo)
 #data.zoo$mine <- data.zoo$roll + data.zoo$ira + data.zoo$reg
 
