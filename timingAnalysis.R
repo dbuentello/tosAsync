@@ -32,3 +32,11 @@ abline(h=mean(opening$diff))
 barplot(y, add=T)
 ********************************
 #find the difference in the opening 8am and 9:30
+
+openingAfter <- data.xts['T09:30/T10:00']
+openingAfter $diff <- c(0,diff(as.numeric(openingAfter$bid),1))
+openingAfter <- openingAfter['T09:58/T10:00']
+mean(openingAfter $diff)
+
+barplot(openingAfter$diff, main="15:59 vs 16:03", sub="Positive: higher after close")
+abline(h=mean(openingAfter$diff))
