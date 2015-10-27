@@ -19,12 +19,12 @@ quote <- TDAQuote(sessionid,ticker)
 maxShares <- round(stockBuyingPower/quote)
 dhsShares <- maxShares - round(maxShares*slipPercent)
 
-dadBuy 	<- getOrder(dadID, "buy", "moc","market",dadShares,ticker)
-momBuy 	<- getOrder(momID, "buy", "moc","market",momShares,ticker)
+#dadBuy 	<- getOrder(dadID, "buy", "moc","market",dadShares,ticker)
+#momBuy 	<- getOrder(momID, "buy", "moc","market",momShares,ticker)
 dhsBuy 	<- getOrder(rollID, "buy","moc","market",dhsShares,ticker)
 dhsTrade <- TDATrade(sessionid, "TSLU", dhsBuy,logFile)
-momTrade <- TDATrade(sessionid, "TSLU", momBuy,logFile)
-dadTrade <- TDATrade(sessionid, "TSLU", dadBuy,logFile)
+#momTrade <- TDATrade(sessionid, "TSLU", momBuy,logFile)
+#dadTrade <- TDATrade(sessionid, "TSLU", dadBuy,logFile)
 
 
 
