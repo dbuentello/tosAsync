@@ -7,7 +7,7 @@ source("~/ShinyApps/tosAsync/private/details.R")
 logFile <<- "~/ShinyApps/tosAsync/out/logFile.txt"
 dDebug <<- F
 
-slipPercent <- 0.005
+slipPercent <- 0.003
 ticker <- "AAPL"
 
 allOrders <<- data.frame()
