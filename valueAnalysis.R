@@ -13,7 +13,7 @@ toWealth <- function(x) {
 valueFile <- "~/ShinyApps/tosAsync/out/value.csv"
 data.zoo <- read.zoo(valueFile, header=T, sep=",")
 data.zoo <- subset(data.zoo, select=-c(mom,dad))
-
+data.zoo$all <- data.zoo$roth + data.zoo$roll + data.zoo$ira + data.zoo$reg
 #wealth or not
 
 theData <- toWealth(data.zoo)
