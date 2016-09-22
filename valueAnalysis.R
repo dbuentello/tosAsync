@@ -6,7 +6,7 @@ library(scales)
 fsb <- 2100
 tweedy <- 4503
 usBonds <- 5634
-interactivebroker <- 58500
+interactivebroker <- 69000
 loan <- 30092
 interactivebroker <- interactivebroker + tweedy + usBonds + fsb - loan
 toWealth <- function(x) {
