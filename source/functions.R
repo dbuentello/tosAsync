@@ -120,6 +120,14 @@ getAccount = function(sessionid, accountid, tdSource="TSLU", sl="AAPL") {
 	# return(xxx)
 # }
 
+getOptions <- function(account) {
+	options <- account$positions$options
+	attributes(options$position)
+	x <- data.frame(matrix(unlist(options,recursive=T), nrow=length(options), byrow = T))
+	y <- x[,c(36,20,49)]
+	names(y) <- c("symbol","theta","BP")
+	return(y)
+}
 convertChain <- function(chain){
 	if (dDebug) print("convertChain")
 	chaindf <- chain$option.chain.result
